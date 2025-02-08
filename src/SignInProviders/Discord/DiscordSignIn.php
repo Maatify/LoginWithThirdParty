@@ -1,6 +1,6 @@
 <?php
 /**
- * @PHP       Version >= 8.0
+ * @PHP       Version >= 8.2
  * @Liberary  LoginWithThirdParty
  * @Project   LoginWithThirdParty
  * @copyright ©2024 Maatify.dev
@@ -151,22 +151,22 @@ abstract class DiscordSignIn extends SignInProvidersAssistance
                         }
                     }else{
                         if(!empty($this->current_ct_id)){
-                            (new $this->redirect_class())->AssignUrlServiceUnavailable();
+                            (new $this->redirect_class())->assignUrlServiceUnavailable();
                         }else{
-                            (new $this->redirect_class())->LoginUrlServiceUnavailable();
+                            (new $this->redirect_class())->loginUrlServiceUnavailable();
                         }
                     }
                 }
             }else{
                 if(!empty($this->current_ct_id)){
-                    (new $this->redirect_class())->AssignUrlServiceUnavailable();
+                    (new $this->redirect_class())->assignUrlServiceUnavailable();
                 }else{
-                    (new $this->redirect_class())->LoginUrlServiceUnavailable();
+                    (new $this->redirect_class())->loginUrlServiceUnavailable();
                 }
             }
         }
 
-        (new $this->redirect_class())->LoginUrlUnauthorized();
+        (new $this->redirect_class())->loginUrlUnauthorized();
         return false;
     }
 

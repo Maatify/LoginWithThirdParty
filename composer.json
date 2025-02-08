@@ -1,7 +1,7 @@
 {
   "name": "maatify/login-with-third-party",
   "description": "Official PHP library for maatify.dev Login With Third Party handler, known by our team",
-  "version": "3.0.0002",
+  "version": "3.0.0003",
   "license": "MIT",
   "type": "library",
   "keywords": [
