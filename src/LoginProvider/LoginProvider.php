@@ -1,6 +1,6 @@
 <?php
 /**
- * @PHP       Version >= 8.0
+ * @PHP       Version >= 8.2
  * @Liberary  LoginWithThirdParty
  * @Project   LoginWithThirdParty
  * @copyright ©2024 Maatify.dev

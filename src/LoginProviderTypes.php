@@ -1,6 +1,6 @@
 <?php
 /**
- * @PHP       Version >= 8.0
+ * @PHP       Version >= 8.2
  * @Liberary  LoginWithThirdParty
  * @Project   LoginWithThirdParty
  * @copyright ©2024 Maatify.dev
@@ -47,7 +47,7 @@ class LoginProviderTypes extends DbConnector
         return self::$instance;
     }
 
-    public function JsonProviders(): void
+    public function jsonProviders(): void
     {
         $providers = $this->RowsThisTable('provider');
 
@@ -61,7 +61,7 @@ class LoginProviderTypes extends DbConnector
         );
     }
 
-    public function JsonValidatePostProvider(): string
+    public function jsonValidatePostProvider(): string
     {
         $provider = $this->postValidator->Require('provider', ValidatorConstantsTypes::Col_Name, $this->class_name . __LINE__);
         if (! $this->RowIsExistThisTable("`provider` = ? ", [strtolower($provider)])) {
