@@ -14,7 +14,7 @@
 namespace Maatify\ThirdPartyLogins;
 
 use Maatify\Json\Json;
-use Maatify\Portal\DbHandler\ParentClassHandler;
+use Maatify\LanguagePortalHandler\DBHandler\ParentClassHandler;
 use Maatify\PostValidatorV2\ValidatorConstantsTypes;
 use Maatify\PostValidatorV2\ValidatorConstantsValidators;
 

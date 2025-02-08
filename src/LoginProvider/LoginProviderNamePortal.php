@@ -13,7 +13,7 @@
 
 namespace Maatify\ThirdPartyLogins\LoginProvider;
 
-use Maatify\Portal\DbHandler\SubClassLanguageHandler;
+use Maatify\LanguagePortalHandler\DBHandler\SubClassLanguageHandler;
 use Maatify\PostValidatorV2\ValidatorConstantsTypes;
 
 class LoginProviderNamePortal extends SubClassLanguageHandler
