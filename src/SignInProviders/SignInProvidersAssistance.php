@@ -15,7 +15,6 @@ namespace Maatify\ThirdPartyLogins\SignInProviders;
 
 use App\Assist\Encryptions\LoginProviderStateEncryption;
 use JetBrains\PhpStorm\NoReturn;
-use Maatify\Portal\Admin\Admin;
 use Maatify\ThirdPartyLogins\AuthLoginProviders;
 use Maatify\ThirdPartyLogins\RedirectHandler;
 
@@ -36,7 +35,7 @@ abstract class SignInProvidersAssistance
 
 
     // this to change it from child class it's can be Admin Class with methods emailIsExist, RegisterByProvider and LoginByProvider
-    protected string $entity_class = Admin::class;
+    protected string $entity_class = Entity::class;
 
 
     // this to change it from child class it's can be adminAuthLoginProvider which extend AuthLoginProviders
