@@ -1,6 +1,6 @@
 <?php
 /**
- * @PHP       Version >= 8.0
+ * @PHP       Version >= 8.2
  * @Liberary  LoginWithThirdParty
  * @Project   LoginWithThirdParty
  * @copyright ©2024 Maatify.dev
@@ -53,62 +53,62 @@ class RedirectHandler
         $this->redirectWithCode($this->assign_url, $code);
     }
 
-    #[NoReturn] public function LoginUrlSuccess(): void
+    #[NoReturn] public function loginUrlSuccess(): void
     {
         $this->loginRedirect(200);
     }
 
-    #[NoReturn] public function LoginUrlReLogin(): void
+    #[NoReturn] public function loginUrlReLogin(): void
     {
         $this->loginRedirect(405000);
     }
 
-    #[NoReturn] public function LoginUrlNotFound(): void
+    #[NoReturn] public function loginUrlNotFound(): void
     {
         $this->loginRedirect(404);
     }
 
-    #[NoReturn] public function LoginUrlBlockIp(): void
+    #[NoReturn] public function loginUrlBlockIp(): void
     {
         $this->loginRedirect(403);
     }
 
-    #[NoReturn] public function LoginUrlNotAllowed(): void
+    #[NoReturn] public function loginUrlNotAllowed(): void
     {
         $this->loginRedirect(405);
     }
 
-    #[NoReturn] public function LoginUrlSuspendedAccount(): void
+    #[NoReturn] public function loginUrlSuspendedAccount(): void
     {
         $this->loginRedirect(403022);
     }
 
-    #[NoReturn] public function LoginUrlUnauthorized(): void
+    #[NoReturn] public function loginUrlUnauthorized(): void
     {
         $this->loginRedirect(401);
     }
 
-    #[NoReturn] public function LoginUrlServiceUnavailable(): void
+    #[NoReturn] public function loginUrlServiceUnavailable(): void
     {
         $this->loginRedirect(503);
     }
 
-    #[NoReturn] public function AssignUrlSuccess(): void
+    #[NoReturn] public function assignUrlSuccess(): void
     {
         $this->assignRedirect(200);
     }
 
-    #[NoReturn] public function AssignUrlEmailUsed(): void
+    #[NoReturn] public function assignUrlEmailUsed(): void
     {
         $this->assignRedirect(8000);
     }
 
-    #[NoReturn] public function AssignUrlProviderInUse(): void
+    #[NoReturn] public function assignUrlProviderInUse(): void
     {
         $this->assignRedirect(3000);
     }
 
-    #[NoReturn] public function AssignUrlServiceUnavailable(): void
+    #[NoReturn] public function assignUrlServiceUnavailable(): void
     {
         $this->assignRedirect(503);
     }

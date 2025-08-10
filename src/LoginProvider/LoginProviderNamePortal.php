@@ -1,6 +1,6 @@
 <?php
 /**
- * @PHP       Version >= 8.0
+ * @PHP       Version >= 8.2
  * @Liberary  LoginWithThirdParty
  * @Project   LoginWithThirdParty
  * @copyright ©2024 Maatify.dev
@@ -13,7 +13,7 @@
 
 namespace Maatify\ThirdPartyLogins\LoginProvider;
 
-use Maatify\Portal\DbHandler\SubClassLanguageHandler;
+use Maatify\LanguagePortalHandler\DBHandler\SubClassLanguageHandler;
 use Maatify\PostValidatorV2\ValidatorConstantsTypes;
 
 class LoginProviderNamePortal extends SubClassLanguageHandler

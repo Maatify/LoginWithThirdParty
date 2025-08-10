@@ -1,6 +1,6 @@
 <?php
 /**
- * @PHP       Version >= 8.0
+ * @PHP       Version >= 8.2
  * @Liberary  LoginWithThirdParty
  * @Project   LoginWithThirdParty
  * @copyright ©2024 Maatify.dev
@@ -16,8 +16,8 @@ namespace Maatify\ThirdPartyLogins\LoginProvider;
 use App\Assist\Encryptions\LoginProviderSecretEncryption;
 use Exception;
 use Maatify\Json\Json;
+use Maatify\LanguagePortalHandler\DBHandler\ParentClassHandler;
 use Maatify\Logger\Logger;
-use Maatify\Portal\DbHandler\ParentClassHandler;
 use Maatify\PostValidatorV2\ValidatorConstantsTypes;
 use Maatify\PostValidatorV2\ValidatorConstantsValidators;
 use Maatify\ThirdPartyLogins\LoginProviderTypes;
@@ -89,10 +89,10 @@ class LoginProviderPortal extends ParentClassHandler
         return self::$instance;
     }
 
-    public function AllPaginationThisTableFilter(string $order_with_asc_desc = ''): void
+    public function allPaginationThisTableFilter(string $order_with_asc_desc = ''): void
     {
         if (! empty($_POST['provider'])) {
-            LoginProviderTypes::obj()->JsonValidatePostProvider();
+            LoginProviderTypes::obj()->jsonValidatePostProvider();
         }
 
         [$tables, $cols] = $this->HandleThisTableJoins();
@@ -117,9 +117,9 @@ class LoginProviderPortal extends ParentClassHandler
         parent::AllPaginationThisTableFilter($order_with_asc_desc);
     }
 
-    public function Record(): void
+    public function record(): void
     {
-        LoginProviderTypes::obj()->JsonValidatePostProvider();
+        LoginProviderTypes::obj()->jsonValidatePostProvider();
         $this->providerExistsJson();
         if (! empty($_POST['client_secret'])) {
             try {
@@ -140,11 +140,11 @@ class LoginProviderPortal extends ParentClassHandler
         }
     }
 
-    public function UpdateByPostedId(): void
+    public function updateByPostedId(): void
     {
         $this->ValidatePostedTableId();
         if (! empty($_POST['provider']) && $_POST['provider'] != $this->current_row['provider']) {
-            LoginProviderTypes::obj()->JsonValidatePostProvider();
+            LoginProviderTypes::obj()->jsonValidatePostProvider();
             $this->providerExistsJson();
         }
         if (! empty($_POST['client_secret'])) {
@@ -159,7 +159,7 @@ class LoginProviderPortal extends ParentClassHandler
         parent::UpdateByPostedId();
     }
 
-    public function UpdateClientSecret(): void
+    public function updateClientSecret(): void
     {
         $this->ValidatePostedTableId();
         $client_secret = $this->postValidator->Require('client_secret', ValidatorConstantsTypes::DeviceId, $this->class_name . __LINE__);

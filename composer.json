@@ -1,8 +1,8 @@
 {
   "name": "maatify/login-with-third-party",
   "description": "Official PHP library for maatify.dev Login With Third Party handler, known by our team",
-  "version": "1.0.0002",
-  "license": "proprietary",
+  "version": "5.0.1",
+  "license": "MIT",
   "type": "library",
   "keywords": [
     "PHP",
@@ -46,14 +46,8 @@
       "role": "IOS Developer"
     }
   ],
-  "config": {
-    "platform": {
-      "php": "8.0.0"
-    }
-  },
   "require": {
-    "php": ">=8.0",
-    "maatify/open-ssl": "^1.0",
+    "maatify/open-ssl": "^5",
     "ext-openssl": "*",
     "league/oauth2-client": "^2.7",
     "league/oauth2-instagram": "^3.1",
@@ -64,9 +58,9 @@
     "wohali/oauth2-discord-new": "^1.2",
     "smolblog/oauth2-twitter": "^1.1",
     "bastiaandewaele/oauth2-tiktok": "^2.0",
-    "maatify/db-model-v3": "^1.2",
-    "maatify/admin-portal-handler": "^1.1",
-    "ext-curl": "*"
+    "maatify/db-model-v3": "^5",
+    "ext-curl": "*",
+    "maatify/language-portal-handler": "^5"
   },
   "autoload": {
     "psr-4": {

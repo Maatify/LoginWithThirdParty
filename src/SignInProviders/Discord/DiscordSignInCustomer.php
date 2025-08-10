@@ -1,6 +1,6 @@
 <?php
 /**
- * @PHP       Version >= 8.0
+ * @PHP       Version >= 8.2
  * @Liberary  LoginWithThirdParty
  * @Project   LoginWithThirdParty
  * @copyright ©2024 Maatify.dev
@@ -33,7 +33,7 @@ class DiscordSignInCustomer extends DiscordSignIn
     {
         $row = LoginProvider::obj()->getByProvider($this->provider_name);
         if(empty($row)){
-            (new $this->redirect_class())->LoginUrlServiceUnavailable();
+            (new $this->redirect_class())->loginUrlServiceUnavailable();
         }
         $this->clientId = $row['client_id'];
         $this->clientSecret =  (new LoginProviderSecretEncryption())->DeHashed($row['client_secret']);
