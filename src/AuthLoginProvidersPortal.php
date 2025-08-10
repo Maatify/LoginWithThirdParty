@@ -1,6 +1,6 @@
 <?php
 /**
- * @PHP       Version >= 8.0
+ * @PHP       Version >= 8.2
  * @Liberary  LoginWithThirdParty
  * @Project   LoginWithThirdParty
  * @copyright ©2024 Maatify.dev
@@ -14,7 +14,7 @@
 namespace Maatify\ThirdPartyLogins;
 
 use Maatify\Json\Json;
-use Maatify\Portal\DbHandler\ParentClassHandler;
+use Maatify\LanguagePortalHandler\DBHandler\ParentClassHandler;
 use Maatify\PostValidatorV2\ValidatorConstantsTypes;
 use Maatify\PostValidatorV2\ValidatorConstantsValidators;
 
@@ -71,7 +71,7 @@ class AuthLoginProvidersPortal extends ParentClassHandler
 //        $this->AllPaginationThisTableFilter();
 //    }
 
-    public function AllPaginationThisTableFilter(string $order_with_asc_desc = ''): void
+    public function allPaginationThisTableFilter(string $order_with_asc_desc = ''): void
     {
         $cols = "`$this->identify_table_id_col_name`, `$this->entity_name_col_name`, `provider`, `provider_user_id`, `email`, `profile_picture`, `linked_time`";
         Json::Success(

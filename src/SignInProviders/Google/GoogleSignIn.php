@@ -1,6 +1,6 @@
 <?php
 /**
- * @PHP       Version >= 8.0
+ * @PHP       Version >= 8.2
  * @Liberary  LoginWithThirdParty
  * @Project   LoginWithThirdParty
  * @copyright ©2024 Maatify.dev
@@ -112,7 +112,7 @@ abstract class GoogleSignIn extends SignInProvidersAssistance
             return true;
         }
 
-        (new $this->redirect_class())->LoginUrlUnauthorized();
+        (new $this->redirect_class())->loginUrlUnauthorized();
         return false;
     }
 }
